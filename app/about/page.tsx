@@ -1,12 +1,5 @@
-import {
-  About,
-  Banner,
-  Features,
-  Products,
-  Serivces,
-  Testimonials,
-  ContactUs,
-} from "./ui/components";
+import { About } from "./ui/components";
+import { TrustedCompany } from "@/app/ui/components";
 import BrandLogo from "./ui/assets/brand_logo.svg";
 // interface AboutProps {
 //   logo?: any;
@@ -144,13 +137,11 @@ const aboutSections = [
 //     sahpeDesign: string;
 //   }
 // ]
-import { Spreated } from "@/app/ui/components";
-import { TrustedCompany } from "../homeui/components";
 export default async function Page() {
   return (
     <main className="mt-[85px] bg-transparent relative z-50">
       <About {...mainAbout} />
-      {/* <TrustedCompany /> */}
+      <TrustedCompany />
 
       {aboutSections.map((about) => (
         <About {...about} />

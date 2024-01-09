@@ -4,10 +4,9 @@ import {
   Features,
   Products,
   Serivces,
-  TrustedCompany,
   Testimonials,
 } from "./homeui/components";
-import { Spreated, ContactUs } from "./ui/components";
+import { TrustedCompany, ContactUs } from "./ui/components";
 export default async function Page() {
   return (
     <main className="mt-[85px] bg-transparent relative z-50">

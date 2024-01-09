@@ -9,3 +9,4 @@ export { default as SpecialIconToSection } from "./SpecialIconToSection";
 export { default as ContactUs } from "./ContactUs";
 export { default as Container } from "./Container";
 export { default as FlexResponsive } from "./FlexResponsive";
+export { default as TrustedCompany } from "./TrustedCompany";
