@@ -1,0 +1,10 @@
+.home-feature-box {
+  // Set initial box shadow
+  box-shadow: 0px -21px 30px 0px rgba(0, 193, 172, 0.3);
+  transition: box-shadow 0.3s ease; // Adding a transition for smooth effect
+
+  &:hover {
+    // Change box shadow on hover
+    box-shadow: 0px 10px 30px 0px rgba(0, 191, 141, 0.7);
+  }
+}

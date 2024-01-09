@@ -1,0 +1,11 @@
+export { default as NavBar } from "./NavBar";
+export { default as Footer } from "./Footer";
+export { default as RootElement } from "./RootElement";
+export { default as Spreated } from "./Spreated";
+export { default as ContactUsBtn } from "./ContactUsBtn";
+export { default as SpecialText } from "./SpecialText";
+export { default as SectionBtnWithRoute } from "./SectionBtnWithRoute";
+export { default as SpecialIconToSection } from "./SpecialIconToSection";
+export { default as ContactUs } from "./ContactUs";
+export { default as Container } from "./Container";
+export { default as FlexResponsive } from "./FlexResponsive";

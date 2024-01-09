@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$small-screen: 768px;
+$medium-screen: 1536px;
+
+/* Montserrat Arabic Black */
+@font-face {
+  font-family: "Montserrat-Arabic";
+  src: url("/fonts/ArbFONTS-Montserrat-Arabic-Black.ttf") format("truetype");
+  font-weight: 900; /* Adjust the weight value as needed */
+  font-style: normal;
+}
+
+/* Montserrat Arabic Bold */
+@font-face {
+  font-family: "Montserrat-Arabic";
+  src: url("/fonts/ArbFONTS-Montserrat-Arabic-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Montserrat Arabic ExtraBold */
+@font-face {
+  font-family: "Montserrat-Arabic";
+  src: url("/fonts/ArbFONTS-Montserrat-Arabic-ExtraBold.ttf") format("truetype");
+  font-weight: 800; /* Adjust the weight value as needed */
+  font-style: normal;
+}
+
+/* Montserrat Arabic ExtraLight */
+@font-face {
+  font-family: "Montserrat-Arabic";
+  src: url("/fonts/ArbFONTS-Montserrat-Arabic-ExtraLight.ttf")
+    format("truetype");
+  font-weight: 200; /* Adjust the weight value as needed */
+  font-style: normal;
+}
+
+/* Montserrat Arabic Light */
+@font-face {
+  font-family: "Montserrat-Arabic";
+  src: url("/fonts/ArbFONTS-Montserrat-Arabic-Light.ttf") format("truetype");
+  font-weight: 300; /* Adjust the weight value as needed */
+  font-style: normal;
+}
+
+/* Montserrat Arabic Medium */
+@font-face {
+  font-family: "Montserrat-Arabic";
+  src: url("/fonts/ArbFONTS-Montserrat-Arabic-Medium.ttf") format("truetype");
+  font-weight: 500; /* Adjust the weight value as needed */
+  font-style: normal;
+}
+
+/* Montserrat Arabic Regular */
+@font-face {
+  font-family: "Montserrat-Arabic";
+  src: url("/fonts/ArbFONTS-Montserrat-Arabic-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Montserrat Arabic SemiBold */
+@font-face {
+  font-family: "Montserrat-Arabic";
+  src: url("/fonts/ArbFONTS-Montserrat-Arabic-SemiBold.ttf") format("truetype");
+  font-weight: 600; /* Adjust the weight value as needed */
+  font-style: normal;
+}
+
+/* Montserrat Arabic Thin */
+@font-face {
+  font-family: "Montserrat-Arabic";
+  src: url("/fonts/ArbFONTS-Montserrat-Arabic-Thin.ttf") format("truetype");
+  font-weight: 100; /* Adjust the weight value as needed */
+  font-style: normal;
+}
+
+.arabic_font {
+  font-family: "Montserrat-Arabic";
+}
+:root {
+  // Color
+  --color-primary: #00c1ac;
+  --color-secondary: ;
+  --gradient-el-1: linear-gradient(180deg, #00eb9d 0%, #009b81 100%);
+  --gradient-el-2: linear-gradient(
+    227deg,
+    #089fda 0%,
+    #02d39c 103.55%,
+    rgba(8, 159, 218, 0) 103.56%
+  );
+  --text-gray: rgba(198, 198, 198, 0.6);
+  --gredient-bg-1: linear-gradient(180deg, #07aace, 0%, #051714 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px; // Default font size for small screens
+
+  @media (min-width: #{$small-screen}) {
+    font-size: 12px; // Font size for screens from 768px to 1536px
+  }
+
+  @media (min-width: #{$medium-screen}) {
+    font-size: 14px; // Font size for screens wider than 1536px
+  }
+}
+
+body {
+  color: #fff;
+  // background: var(--gredient-bg-1);
+  background-color: #020015;
+  position: relative;
+  overflow-x: hidden;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 693px;
+    height: 693px;
+    flex-shrink: 0;
+    border-radius: 693px;
+    filter: blur(250px);
+  }
+
+  &::before {
+    top: 0;
+    right: 0;
+    background: #6500e5;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    top: 0;
+    left: 0;
+    background: #00e509;
+    transform: rotate(-45deg);
+  }
+}
+// 'sm': '640px',      // Small screens
+// 'md': '768px',      // Medium screens
+// 'lg': '1024px',     // Large screens
+// 'xl': '1280px',     // Extra-large screens
+// '2xl': '1440px',    // 2XL screens
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px;
+  /* Your other container styles */
+  @media (min-width: 1024px) {
+    max-width: 990px;
+    padding: 0;
+  }
+  /* For screens larger than 1440px */
+  @media (min-width: 1441px) {
+    max-width: 1240px;
+    padding: 0;
+  }
+}
+
+.gradient-el-background {
+  background-color: var(--gradient-el-background);
+}
+.gradient-el-text {
+  color: var(--gradient-el-background);
+}
+
+.custom-shadow {
+  box-shadow: 0px 0px 4px 0px #fff inset;
+  filter: drop-shadow(0px 0px 30px #01beaa);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -16px;
+  margin-left: -16px;
+  & > * {
+    padding: 0 15px;
+    margin-bottom: 15px;
+  }
+}

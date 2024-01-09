@@ -1,0 +1,50 @@
+import { BlogData } from "@/app/data/interfaces/blog";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+
+const BlogCard: React.FC<BlogData> = ({ id, src, title, desc, date }) => {
+  return (
+    <div className="max-h-[553px] w-1/3">
+      <div className="border border-solid border-green-500 rounded-lg px-4 py-3">
+        <div className="w-full h-[269px] mb-7">
+          <Image
+            className="w-full h-[269px]"
+            src={src}
+            alt={title}
+            width={360}
+            height={269}
+          />
+        </div>
+        <div className="mb-7">
+          <h3 className="text-white font-semibold text-20 leading-6 mb-3">
+            {title}
+          </h3>
+          <p className="text-gray-400  font-semibold text-base leading-6 mb-9">
+            {desc}
+          </p>
+          <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 ">
+              <div className="">lgog</div>
+              <div className="">DeepStark</div>
+            </div>
+            <span> | </span>
+            <div className="text-gray-400 font-Montserrat-Arabic font-semibold text-base leading-[1.22]">
+              {date}
+            </div>
+          </div>
+        </div>
+
+        <div className="flex justify-end">
+          <Link
+            href={`blog/${id}`}
+            className="text-white  font-semibold text-base leading-[1.47] ">
+            See more {"->"}
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BlogCard;

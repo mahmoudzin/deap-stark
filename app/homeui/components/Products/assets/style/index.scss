@@ -1,0 +1,42 @@
+.home-product-card {
+  transition: all 0.5s ease-in-out;
+
+  .home-product-card-image {
+    transition: all 0.5s ease-in-out;
+
+    svg {
+      transition: all 0.5s ease-in-out;
+    }
+
+    background: var(
+      --grid-4,
+      linear-gradient(
+        227deg,
+        #089fda 0%,
+        #02d39c 103.55%,
+        rgba(8, 159, 218, 0) 103.56%
+      )
+    );
+  }
+
+  &:hover {
+    background: 
+      linear-gradient(
+        227deg,
+        #089fda 0%,
+        #02d39c 103.55%,
+        rgba(8, 159, 218, 0) 103.56%
+      );
+    border: none;
+
+    .home-product-card-image {
+      background: #fff;
+
+      svg {
+        path {
+          fill: #089fda;
+        }
+      }
+    }
+  }
+}
