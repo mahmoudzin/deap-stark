@@ -1,14 +1,5 @@
-import {
-  Container,
-  SectionBtnWithRoute,
-  SpecialIconToSection,
-  SpecialText,
-  Spreated,
-} from "@/app/ui/components";
+import { Container, Spreated } from "@/app/ui/components";
 import Image from "next/image";
-import Link from "next/link";
-import MarkupIcon from "./assets/right_mark.svg";
-import aboutSecIcon from "./assets/about-sec-icon.svg";
 
 interface AboutProps {
   logo?: string;
