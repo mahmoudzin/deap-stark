@@ -169,7 +169,7 @@ const inputs: Input[] = [
 // ContactUs component remains the same
 const ContactUs: React.FC = () => {
   return (
-    <Container extraClasses="bg-[url('/images/home/contactus/image-1.png')] bg-cover bg-center bg-no-reapte lg:bg-[url('')]">
+    <Container extraClasses="bg-[url('/images/home/contactus/image-1.png')] bg-cover bg-center bg-no-reapte lg:bg-[url('')] p-4 lg:p-0">
       <h3 className="mb-[70px] text-white font-bold text-3xl leading-[1.01523]">
         تواصل مع
         <SpecialText

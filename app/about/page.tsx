@@ -4,7 +4,6 @@ import {
   Features,
   Products,
   Serivces,
-  TrustedCompany,
   Testimonials,
   ContactUs,
 } from "./ui/components";
@@ -146,25 +145,16 @@ const aboutSections = [
 //   }
 // ]
 import { Spreated } from "@/app/ui/components";
+import { TrustedCompany } from "../homeui/components";
 export default async function Page() {
   return (
-    <>
+    <main className="mt-[85px] bg-transparent relative z-50">
       <About {...mainAbout} />
-      <TrustedCompany />
+      {/* <TrustedCompany /> */}
 
       {aboutSections.map((about) => (
         <About {...about} />
       ))}
-
-      {/* <Banner />
-      
-      <Features />
-
-      <Spreated num="02" title="ماذا نفعل" />
-      <Products />
-      <Serivces />
-      <Testimonials />
-      <ContactUs /> */}
-    </>
+    </main>
   );
 }

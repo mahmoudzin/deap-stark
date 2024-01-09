@@ -1,4 +1,5 @@
 import {
+  Container,
   SectionBtnWithRoute,
   SpecialIconToSection,
   SpecialText,
@@ -45,16 +46,17 @@ export default function About({
   shapeParentDesign,
 }: AboutProps) {
   return (
-    <div className="mb-[100px]">
+    <Container>
       <Spreated num={spreatedNuber} title={spreatedText} reverse={reverse} />
       <div
         className={`flex mt-[50px] justify-between ${
           reverse && "flex-row-reverse"
-        } first-line:mt-12 mb-[100px]`}>
+        } first-line:mt-12 mb-[100px]`}
+      >
         <TextSection {...{ logo, optionalText }}>{MainText}</TextSection>
         <ImageSection {...{ imageSrc, sahpeDesign, shapeParentDesign }} />
       </div>
-    </div>
+    </Container>
   );
 }
 
@@ -80,7 +82,7 @@ function ImageSection({
       <div className={sahpeDesign} />
       <Image
         src={imageSrc}
-        className="w-[474.44px] h-[299.51px] left-0 top-[35.66px] absolute rounded-[10px] border-2"
+        className="w-[474.44px] h-[299.51px] left-[6px] top-[40px] absolute rounded-[10px] border-2"
         width={474}
         height={299}
         alt="about section"
