@@ -9,7 +9,12 @@ import img_shape_3 from "./assets/img_shape_3.svg";
 import img_shape_4 from "./assets/img_shape_4.svg";
 
 import Image from "next/image";
-import { SectionBtnWithRoute, SpecialText } from "..";
+import {
+  Container,
+  SectionBtnWithRoute,
+  SpecialText,
+  FlexResponsive,
+} from "..";
 
 // Define the interface for input objects
 interface Input {
@@ -52,7 +57,8 @@ const ContectFormInput: React.FC<ContactFormInputProps> = ({
             name={name}
             style={{ width: "calc(100% - 64px)" }}
             className={inputClasses}
-            placeholder={placeholder}></textarea>
+            placeholder={placeholder}
+          ></textarea>
         </div>
       ) : (
         <div className={`h-[79px] ${commonClasses}`}>
@@ -75,7 +81,7 @@ const ContectFormInput: React.FC<ContactFormInputProps> = ({
 // ContactForm component with TypeScript types
 const ContactForm: React.FC<ContactFormProps> = ({ inputs }) => {
   return (
-    <form className="flex flex-col w-1/2 gap-3">
+    <form className="flex flex-col w-full lg:w-1/2 gap-3">
       {inputs.map((input) => (
         <ContectFormInput key={input.name} {...input} />
       ))}
@@ -89,7 +95,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ inputs }) => {
 // ContactImage component with TypeScript types
 const ContactImage: React.FC = () => {
   return (
-    <div className="relative h-[538px] w-[553px]">
+    <div className="relative h-[538px] hidden lg:block lg:w-[553px]">
       {/* layer */}
       <div className="absolute top-0 left-0 bottom-0 right-0 rounded-lg  z-10">
         <Image
@@ -163,7 +169,7 @@ const inputs: Input[] = [
 // ContactUs component remains the same
 const ContactUs: React.FC = () => {
   return (
-    <div className="container mb-[135px]">
+    <Container extraClasses="bg-[url('/images/home/contactus/image-1.png')] bg-cover bg-center bg-no-reapte lg:bg-[url('')]">
       <h3 className="mb-[70px] text-white font-bold text-3xl leading-[1.01523]">
         تواصل مع
         <SpecialText
@@ -173,13 +179,13 @@ const ContactUs: React.FC = () => {
           styleOption={2}
         />
       </h3>
-      <div className="flex justify-between">
+      <FlexResponsive gapCol="gap-20">
         {/* form */}
         <ContactForm inputs={inputs} />
         {/* imgSection */}
         <ContactImage />
-      </div>
-    </div>
+      </FlexResponsive>
+    </Container>
   );
 };
 
